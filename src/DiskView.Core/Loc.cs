@@ -1,4 +1,4 @@
-namespace DiskView.Core;
+﻿namespace DiskView.Core;
 
 /// <summary>界面文案表。中文版与英文版通过编译常量 APP_LANG_EN 区分。</summary>
 public sealed class Loc
@@ -125,6 +125,24 @@ public sealed class Loc
         ["AppRunning"] = "程序正在运行，请先关闭后再卸载。",
         ["Publisher"] = "发布者",
         ["InstallSize"] = "所需空间约 {0}",
+        ["DisclaimerTitle"] = "免责声明",
+        ["DisclaimerHeading"] = "使用前请阅读免责声明",
+        ["DisclaimerHint"] = "勾选上方选项后才能继续使用",
+        ["DisclaimerCheck"] = "我已阅读并理解上述免责声明，并同意自行承担使用风险",
+        ["DisclaimerAccept"] = "同意并继续",
+        ["DisclaimerDecline"] = "不同意并退出",
+        ["DisclaimerText"] = """
+            DiskView 磁盘空间分析器（以下简称“本软件”）是一款开源的磁盘空间分析工具，具备删除、剪切、移动、重命名等直接修改文件系统的能力。
+
+            1. 本软件按“现状”提供，不附带任何明示或暗示的担保，作者不保证其无缺陷，也不保证扫描或文件操作结果完全准确。
+            2. 所有文件操作均由你主动发起并确认，执行结果直接作用于本机文件。请在使用前备份重要数据，并确认操作对象无误；因误操作、程序缺陷、断电或磁盘故障导致的数据丢失、文件损坏或系统故障，由你自行承担。
+            3. 扫描结果受文件权限、硬链接、压缩与去重等因素影响，仅供容量分析参考，不应作为计费、审计或司法取证的唯一依据。
+            4. 本软件未进行代码签名，请仅从官方发布页获取；从第三方渠道下载、修改或重新打包的版本可能存在安全风险。
+            5. 请遵守所在国家或地区的法律法规，不得利用本软件侵犯他人隐私、破坏计算机信息系统或从事其他违法活动。
+            6. 在适用法律允许的最大范围内，作者及贡献者不对因使用或无法使用本软件而产生的任何直接或间接损失承担责任。
+
+            勾选下方选项并点击“同意并继续”，即表示你已阅读、理解并接受以上全部内容；点击“不同意并退出”将立即退出本软件。
+            """,
     };
 
     private static readonly Dictionary<string, string> English = new()
@@ -241,6 +259,24 @@ public sealed class Loc
         ["AppRunning"] = "Please close the application before uninstalling.",
         ["Publisher"] = "Publisher",
         ["InstallSize"] = "Requires about {0}",
+        ["DisclaimerTitle"] = "Disclaimer",
+        ["DisclaimerHeading"] = "Please read the disclaimer",
+        ["DisclaimerHint"] = "You must check the box to continue",
+        ["DisclaimerCheck"] = "I have read and understood the disclaimer and accept the risks of use",
+        ["DisclaimerAccept"] = "Agree and continue",
+        ["DisclaimerDecline"] = "Disagree and exit",
+        ["DisclaimerText"] = """
+            DiskView is an open-source disk space analysis tool that can delete, cut, move and rename files, directly modifying your file system.
+
+            1. The software is provided "AS IS", without warranties of any kind. The authors do not warrant that it is free of defects or that scan results and file operations are entirely accurate.
+            2. All file operations are initiated and confirmed by you and take effect immediately on your computer. Back up important data first and verify the targets; you are solely responsible for any data loss, file corruption or system failure caused by mistakes, defects, power loss or disk errors.
+            3. Reported sizes are affected by file permissions, hard links, compression and deduplication, and are for capacity analysis only. Do not rely on them as the sole basis for billing, auditing or forensic purposes.
+            4. The software is not code-signed. Obtain it only from the official release page; builds from third parties, modified or repackaged builds may pose security risks.
+            5. You must comply with applicable laws and must not use the software to invade privacy, damage information systems or engage in any other unlawful activity.
+            6. To the maximum extent permitted by law, the authors and contributors are not liable for any direct or indirect loss arising from the use of or inability to use the software.
+
+            Check the box below and click "Agree and continue" to confirm that you have read, understood and accepted the terms above. Clicking "Disagree and exit" closes the application immediately.
+            """,
     };
 
     public string this[string key]

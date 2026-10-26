@@ -1,0 +1,73 @@
+<Window x:Class="DiskView.App.DisclaimerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:app="clr-namespace:DiskView.App"
+        Title="{app:Tr DisclaimerTitle}"
+        Width="680"
+        Height="660"
+        MinWidth="560"
+        MinHeight="460"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource AppBackground}"
+        FontFamily="{StaticResource AppFont}"
+        Icon="Assets/app.ico"
+        ShowInTaskbar="False"
+        ResizeMode="CanResizeWithGrip">
+
+    <Grid Margin="22,18,22,18">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- 标题 -->
+        <StackPanel Orientation="Horizontal" Margin="2,0,0,14">
+            <Border Width="34" Height="34" CornerRadius="8" Background="Transparent">
+                <Image Source="Assets/app.ico" Width="34" Height="34"
+                       RenderOptions.BitmapScalingMode="HighQuality" />
+            </Border>
+            <StackPanel Margin="10,0,0,0" VerticalAlignment="Center">
+                <TextBlock Text="{app:Tr DisclaimerHeading}" FontSize="15" FontWeight="Bold"
+                           Foreground="{StaticResource TextPrimary}" />
+                <TextBlock Text="{app:Tr AppSubtitle}" FontSize="10.5" Margin="0,2,0,0"
+                           Foreground="{StaticResource TextTertiary}" />
+            </StackPanel>
+        </StackPanel>
+
+        <!-- 声明正文 -->
+        <Border Grid.Row="1" Background="White" BorderBrush="{StaticResource PanelBorder}" BorderThickness="1"
+                CornerRadius="8" Padding="18,14">
+            <ScrollViewer x:Name="BodyScroll" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled"
+                          Focusable="False">
+                <TextBlock x:Name="DisclaimerBody" TextWrapping="Wrap" FontSize="12.5" LineHeight="21"
+                           Foreground="{StaticResource TextSecondary}" />
+            </ScrollViewer>
+        </Border>
+
+        <!-- 确认勾选 -->
+        <CheckBox x:Name="AgreeCheck" Grid.Row="2" Margin="2,14,0,0" FontSize="12.5"
+                  Foreground="{StaticResource TextPrimary}" VerticalContentAlignment="Center"
+                  Content="{app:Tr DisclaimerCheck}" />
+
+        <!-- 底部按钮 -->
+        <Grid Grid.Row="3" Margin="0,14,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0" Text="{app:Tr DisclaimerHint}" FontSize="11"
+                       Foreground="{StaticResource TextTertiary}" VerticalAlignment="Center" />
+
+            <Button x:Name="DeclineButton" Grid.Column="1" Content="{app:Tr DisclaimerDecline}" Style="{StaticResource GhostButton}"
+                    Width="160" Height="34" Margin="0,0,10,0" Click="Decline_Click" />
+
+            <Button x:Name="AgreeButton" Grid.Column="2" Content="{app:Tr DisclaimerAccept}"
+                    Style="{StaticResource PrimaryButton}" Width="160" Height="34"
+                    IsEnabled="{Binding IsChecked, ElementName=AgreeCheck}" Click="Agree_Click" />
+        </Grid>
+    </Grid>
+</Window>

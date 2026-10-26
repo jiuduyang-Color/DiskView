@@ -8,6 +8,8 @@
 
 DiskView（磁盘空间分析器，以下简称“本软件”）是一款开源的磁盘空间分析与文件管理辅助工具。在使用本软件前，请仔细阅读以下内容。**下载、安装、运行或使用本软件，即表示你已阅读、理解并同意本免责声明的全部条款。** 如果你不同意，请立即停止使用并删除本软件。
 
+> **首次启动确认**：本软件在首次启动时会弹出本免责声明，必须由你本人手动勾选“我已阅读并理解上述免责声明”并点击“同意并继续”后才能使用；点击“不同意并退出”或直接关闭窗口，程序将立即退出。同意记录保存在 `%LocalAppData%\DiskSpaceAnalyzer\agreement.txt`（英文版为 `DiskSpaceAnalyzer-EN`），不包含任何个人信息；当免责声明内容随版本更新后，程序会要求重新确认。
+
 ### 1. 按“现状”提供
 
 本软件以“现状”（AS IS）和“现有可用”（AS AVAILABLE）为基础提供，不附带任何形式的明示或暗示担保，包括但不限于对适销性、特定用途适用性、准确性、完整性、不侵权或持续可用的担保。作者不保证本软件无缺陷、不保证其运行不中断、也不保证扫描或文件操作结果完全准确。
@@ -47,6 +49,8 @@ DiskView（磁盘空间分析器，以下简称“本软件”）是一款开源
 ## English
 
 DiskView (the "Software") is an open-source disk space analysis and file management utility. Please read the following carefully before use. **By downloading, installing, running or otherwise using the Software, you acknowledge that you have read, understood and agreed to all terms of this disclaimer.** If you do not agree, stop using the Software and delete it immediately.
+
+> **First-run confirmation**: On first launch the Software displays this disclaimer. You must personally check "I have read and understood the disclaimer" and click "Agree and continue" before use; clicking "Disagree and exit" or closing the window terminates the application immediately. The acceptance record is stored in `%LocalAppData%\DiskSpaceAnalyzer-EN\agreement.txt`, contains no personal information, and must be confirmed again if the disclaimer is updated in a later version.
 
 ### 1. Provided "AS IS"
 

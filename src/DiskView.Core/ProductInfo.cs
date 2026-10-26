@@ -4,6 +4,7 @@ namespace DiskView.Core;
 public static class ProductInfo
 {
     public const string Version = "1.0.0";
+    public const string DisclaimerVersion = "1.0";
     public const string Publisher = "DiskView";
     public const string ExeName = "DiskSpaceAnalyzer.exe";
 

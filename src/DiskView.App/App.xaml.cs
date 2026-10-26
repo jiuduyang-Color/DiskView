@@ -19,9 +19,24 @@ public partial class App : Application
             return;
         }
 
+        // 免责声明未确认前不创建主窗口；显式控制关闭时机，避免关闭对话框时程序被提前退出
+        ShutdownMode = ShutdownMode.OnExplicitShutdown;
+
+        if (!AgreementStore.IsAccepted())
+        {
+            var disclaimer = new DisclaimerWindow();
+            if (disclaimer.ShowDialog() != true)
+            {
+                Shutdown();
+                return;
+            }
+            AgreementStore.Accept();
+        }
+
         var window = new MainWindow();
         MainWindow = window;
         window.Show();
+        ShutdownMode = ShutdownMode.OnMainWindowClose;
     }
 
     private void OnDispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
