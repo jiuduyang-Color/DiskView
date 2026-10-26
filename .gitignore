@@ -1,0 +1,14 @@
+# 构建输出
+bin/
+obj/
+artifacts/
+build/
+src/DiskView.Setup/payload/
+
+# IDE
+.vs/
+*.user
+*.suo
+
+# 系统
+Thumbs.db

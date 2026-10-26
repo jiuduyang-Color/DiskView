@@ -1,0 +1,10 @@
+﻿<Project>
+
+  <!-- 英文版使用独立的 obj/bin 目录，避免与中文版共用同一份编译缓存导致语言常量失效 -->
+  <PropertyGroup Condition="'$(Lang)' == 'en'">
+    <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)artifacts\obj-en\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(MSBuildThisFileDirectory)artifacts\bin-en\</BaseOutputPath>
+    <DefaultItemExcludes>$(DefaultItemExcludes);obj\**;bin\**</DefaultItemExcludes>
+  </PropertyGroup>
+
+</Project>
