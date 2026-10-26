@@ -92,6 +92,12 @@ DiskView/
 
 C# · .NET 8 · WPF · Win32 API（`FindFirstFileExW`、`SHFileOperationW`、`ShellExecuteExW`）
 
+## 免责声明
+
+本软件按“现状”提供，不附带任何明示或暗示的担保。软件具备删除、剪切、移动、重命名等直接修改文件系统的能力，请在使用前自行备份重要数据，并确认操作对象无误；因误操作或程序缺陷导致的数据丢失、系统故障等后果由使用者自行承担。扫描结果受权限、硬链接、压缩、去重等因素影响，仅供容量分析参考，不应作为计费、审计或司法取证的唯一依据。
+
+本项目为独立开源项目，与 WizTree 等商业软件无任何关联。完整条款（含英文版）见 [DISCLAIMER.md](DISCLAIMER.md)。
+
 ## 许可证
 
 [MIT License](LICENSE)
